@@ -47,7 +47,7 @@ end
 addEvent("sNvSp", true)
 addEventHandler("sNvSp", getRootElement(), sNvSp)
 
-function pedLoad ( name )
+function pedLoad (  )
 if testMod = true then
         for i = 1,50 do
           local peds = createPed ( 120, 2478+i*10, -745,12 )

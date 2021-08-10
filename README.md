@@ -5,4 +5,5 @@
 Данная версия предназначена для слежки за игроками, но для теста использовались Ped на стороне сервера, для того что-бы следить за игроками необходими внести изменения -
 
 1) Открываем файл client.lua -> переходим на 38 сточку кода, и находим -> getElementsByType("ped") - нужно изменить на -> getElementsByType("player")
-2) Открываем файл server.lua -> переходим на 2 сточку кода, и находим -> local testMod = true - нужно изменить на -> local testMod = false
+2) Переходим на 40 сточку кода, и находим -> tostring("Персонаж - "..getElementData(v,"ID")) - нужно изменить на ->  tostring(getPlayerName(v).." ("..getElementData(v,"ID")..")")
+3) Открываем файл server.lua -> переходим на 2 сточку кода, и находим -> local testMod = true - нужно изменить на -> local testMod = false

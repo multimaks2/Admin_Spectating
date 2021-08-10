@@ -1,3 +1,6 @@
+
+local testMod = true -- true Вкл/ false Выкл
+
 function getPlayerFromID ( id )
     for k, player in ipairs ( getElementsByType ( "player" ) ) do
         local p_id = getElementData ( player, "ID" )
@@ -45,10 +48,11 @@ addEvent("sNvSp", true)
 addEventHandler("sNvSp", getRootElement(), sNvSp)
 
 function pedLoad ( name )
-    for i = 1,50 do
-        local peds = createPed ( 120, 2478+i*10, -745,12 )
-        setElementData(peds,"ID",i)
-        -- print(i)
+if testMod = true then
+        for i = 1,50 do
+          local peds = createPed ( 120, 2478+i*10, -745,12 )
+          setElementData(peds,"ID",i)
+        end
     end
 end
 addEventHandler ( "onResourceStart", getResourceRootElement(), pedLoad )
